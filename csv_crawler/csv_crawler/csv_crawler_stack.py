@@ -11,7 +11,7 @@ class CsvCrawlerStack(core.Stack):
     def __init__(self, scope: core.Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
-        bucket = s3.Bucket(self, 'csv-bucket')
+        bucket = s3.Bucket(self, 'csv-bucket', )
 
         glue_role = iam.Role(
             self,
